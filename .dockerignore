@@ -14,7 +14,7 @@ element/1.*
 element/2.*
 expressjs.com/.git
 koajs.com/.git
-react-native-doc/.git
+react-native/.git
 sequelize.org/.git
 typeorm.github.io/.git
 zh-hans.reactjs.org/.git
