@@ -1,0 +1,37 @@
+[submodule "react-native-doc"]
+	path = react-native-doc
+	url = git@github.com:jaywcjlove/react-native-doc.git
+[submodule "typeorm.github.io"]
+	path = typeorm.github.io
+	url = https://github.com/typeorm/typeorm.github.io.git
+[submodule "sequelize.org"]
+	path = sequelize.org
+	url = https://github.com/sequelize/sequelize.org.git
+	branch = gh-pages
+[submodule "cn.vuejs.org"]
+	path = cn.vuejs.org
+	url = git@github.com:vuejs/cn.vuejs.org.git
+	branch = gh-pages
+[submodule "koajs.com"]
+	path = koajs.com
+	url = https://github.com/koajs/koajs.com.git
+	branch = gh-pages
+[submodule "ant-design"]
+	path = ant-design
+	url = git@gitee.com:ant-design/ant-design.git
+[submodule "cn.eslint.org"]
+	path = cn.eslint.org
+	url = https://github.com/eslint/cn.eslint.org.git
+	branch = gh-pages
+[submodule "zh-hans.reactjs.org"]
+	path = zh-hans.reactjs.org
+	url = git@github.com:reactjs/zh-hans.reactjs.org.git
+	branch = gh-pages
+[submodule "expressjs.com"]
+	path = expressjs.com
+	url = https://github.com/expressjs/expressjs.com.git
+	branch = gh-pages
+[submodule "element"]
+	path = element
+	url = https://github.com/ElemeFE/element.git
+	branch = gh-pages
