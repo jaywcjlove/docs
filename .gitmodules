@@ -10,10 +10,6 @@
 	path = expressjs.com
 	url = https://github.com/expressjs/expressjs.com.git
 	branch = gh-pages
-[submodule "element"]
-	path = element
-	url = https://github.com/ElemeFE/element.git
-	branch = gh-pages
 [submodule "jestjs.io"]
 	path = jestjs.io
 	url = https://github.com/jaywcjlove/doc-static.git
@@ -38,3 +34,7 @@
 	path = zh-hans.reactjs.org
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = zh-hans.reactjs.org
+[submodule "element.eleme.io"]
+	path = element.eleme.io
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = element.eleme.io

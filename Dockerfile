@@ -9,7 +9,7 @@ WORKDIR $APPDIR
 ADD ./ant.design $APPDIR/ant.design
 # ADD ./cn.eslint.org $APPDIR/cn.eslint.org
 ADD ./cn.vuejs.org $APPDIR/cn.vuejs.org
-ADD ./element/2.13 $APPDIR/element
+ADD ./element.eleme.io/2.13 $APPDIR/element.eleme.io
 
 ADD ./expressjs.com/2x $APPDIR/expressjs.com/2x
 
