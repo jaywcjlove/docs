@@ -18,6 +18,7 @@ docker run --name docs \
   -p 60006:60006 \
   -p 60007:60007 \
   -p 60008:60008 \
+  -p 60009:60009 \
   -p 60031:60031 \
   -p 60034:60034 \
   --restart=always \
@@ -34,6 +35,7 @@ docker run --name docs \
 - Port: `60006` - [typeorm.github.io](https://typeorm.io/)
 - Port: `60007` - [zh-hans.reactjs.org](https://zh-hans.reactjs.org/)
 - Port: `60008` - [expressjs.com/2x](http://expressjs.com/) old
+- Port: `60009` - [jestjs.io](https://jestjs.io/)
 - Port: `60031` - [sequelize.org/v3](https://sequelize.org/v3/)
 - ~~Port: `60032` - [sequelize.org/v4](https://sequelize.org/v4/)~~ Too big
 - ~~Port: `60033` - [sequelize.org/v5](https://sequelize.org/v5/)~~ Too big
@@ -65,6 +67,7 @@ docker run --rm \
   -p 60006:60006 \
   -p 60007:60007 \
   -p 60008:60008 \
+  -p 60009:60009 \
   -p 60031:60031 \
   -p 60034:60034 \
   --name docs docs:1.0.0

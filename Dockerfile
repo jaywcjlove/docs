@@ -14,6 +14,7 @@ ADD ./element/2.13 $APPDIR/element
 ADD ./expressjs.com/2x $APPDIR/expressjs.com/2x
 
 ADD ./koajs.com $APPDIR/koajs.com
+ADD ./jestjs.io $APPDIR/jestjs.io
 ADD ./react-native $APPDIR/react-native
 ADD ./typeorm.github.io $APPDIR/typeorm.github.io
 ADD ./zh-hans.reactjs.org $APPDIR/zh-hans.reactjs.org
