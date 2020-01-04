@@ -2,10 +2,6 @@
 	path = sequelize.org
 	url = https://github.com/sequelize/sequelize.org.git
 	branch = gh-pages
-[submodule "cn.vuejs.org"]
-	path = cn.vuejs.org
-	url = git@github.com:vuejs/cn.vuejs.org.git
-	branch = gh-pages
 [submodule "expressjs.com"]
 	path = expressjs.com
 	url = https://github.com/expressjs/expressjs.com.git
@@ -38,3 +34,7 @@
 	path = element.eleme.io
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = element.eleme.io
+[submodule "cn.vuejs.org"]
+	path = cn.vuejs.org
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = cn.vuejs.org
