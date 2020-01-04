@@ -6,10 +6,6 @@
 	path = cn.vuejs.org
 	url = git@github.com:vuejs/cn.vuejs.org.git
 	branch = gh-pages
-[submodule "zh-hans.reactjs.org"]
-	path = zh-hans.reactjs.org
-	url = git@github.com:reactjs/zh-hans.reactjs.org.git
-	branch = gh-pages
 [submodule "expressjs.com"]
 	path = expressjs.com
 	url = https://github.com/expressjs/expressjs.com.git
@@ -38,3 +34,7 @@
 	path = koajs.com
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = koajs.com
+[submodule "zh-hans.reactjs.org"]
+	path = zh-hans.reactjs.org
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = zh-hans.reactjs.org
