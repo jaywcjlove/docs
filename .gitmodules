@@ -33,7 +33,7 @@
 	path = ant-design
 	url = https://github.com/ant-design/ant-design.git
 	branch = gh-pages
-[submodule "react-native-doc"]
-	path = react-native-doc
-	url = https://github.com/jaywcjlove/react-native-doc.git
-	branch = gh-pages
+[submodule "jestjs.io"]
+	path = jestjs.io
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = jestjs.io
