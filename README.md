@@ -1,7 +1,7 @@
 Development Documentation.
 ----
 
-Centralized management of various development documents. [Docker Repository](https://hub.docker.com/r/wcjiang/docs).
+Centralized management of various development documents. [Docker Repository.](https://hub.docker.com/r/wcjiang/docs)
 
 ## Quick Start
 
@@ -10,8 +10,7 @@ docker pull wcjiang/docs
 ```
 
 ```bash
-docker run --rm \
-  --name docs \
+docker run --name docs \
   -p 60001:60001 \
   -p 60003:60003 \
   -p 60004:60004 \
@@ -21,6 +20,7 @@ docker run --rm \
   -p 60008:60008 \
   -p 60031:60031 \
   -p 60034:60034 \
+  --restart=always \
   -d wcjiang/docs:1.0.0
 ```
 
