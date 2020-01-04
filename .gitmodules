@@ -1,6 +1,3 @@
-[submodule "react-native-doc"]
-	path = react-native-doc
-	url = git@github.com:jaywcjlove/react-native-doc.git
 [submodule "typeorm.github.io"]
 	path = typeorm.github.io
 	url = https://github.com/typeorm/typeorm.github.io.git
@@ -35,4 +32,8 @@
 [submodule "ant-design"]
 	path = ant-design
 	url = https://github.com/ant-design/ant-design.git
+	branch = gh-pages
+[submodule "react-native-doc"]
+	path = react-native-doc
+	url = https://github.com/jaywcjlove/react-native-doc.git
 	branch = gh-pages
