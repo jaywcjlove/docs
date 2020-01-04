@@ -16,9 +16,6 @@
 	path = koajs.com
 	url = https://github.com/koajs/koajs.com.git
 	branch = gh-pages
-[submodule "ant-design"]
-	path = ant-design
-	url = git@gitee.com:ant-design/ant-design.git
 [submodule "cn.eslint.org"]
 	path = cn.eslint.org
 	url = https://github.com/eslint/cn.eslint.org.git
@@ -34,4 +31,8 @@
 [submodule "element"]
 	path = element
 	url = https://github.com/ElemeFE/element.git
+	branch = gh-pages
+[submodule "ant-design"]
+	path = ant-design
+	url = https://github.com/ant-design/ant-design.git
 	branch = gh-pages
