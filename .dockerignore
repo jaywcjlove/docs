@@ -5,7 +5,7 @@
 # https://docs.docker.com/engine/reference/builder/#dockerignore-file
 
 *.git
-ant-design/.git
+ant.design/.git
 cn.eslint.org/.git
 cn.vuejs.org/.git
 cn.vuejs.org/v2
