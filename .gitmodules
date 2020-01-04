@@ -1,7 +1,3 @@
-[submodule "expressjs.com"]
-	path = expressjs.com
-	url = https://github.com/expressjs/expressjs.com.git
-	branch = gh-pages
 [submodule "jestjs.io"]
 	path = jestjs.io
 	url = https://github.com/jaywcjlove/doc-static.git
@@ -38,3 +34,7 @@
 	path = sequelize.org
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = sequelize.org
+[submodule "expressjs.com"]
+	path = expressjs.com
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = expressjs.com
