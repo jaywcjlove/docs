@@ -37,3 +37,7 @@
 	path = jestjs.io
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = jestjs.io
+[submodule "react-native"]
+	path = react-native
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = react-native
