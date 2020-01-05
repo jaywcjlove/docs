@@ -1,7 +1,8 @@
 name: Build and Deploy react-native-doc
 on:
-  tags:
-    - v*
+  push:
+    tags:
+      - v*
 
 env:
   # TODO: Change variable to your image's name.
