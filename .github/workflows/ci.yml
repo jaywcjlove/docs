@@ -23,7 +23,7 @@ jobs:
       - name: Build image
         run: docker build -t docs .
 
-      - name: Tags
+      - name: Tags & Push
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
