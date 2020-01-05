@@ -6,7 +6,7 @@ Centralized management of various development documents. [Docker Repository.](ht
 ## Quick Start
 
 ```bash
-docker pull wcjiang/docs
+docker pull wcjiang/docs:latest
 ```
 
 ```bash
@@ -24,7 +24,7 @@ docker run --name docs \
   -p 60031:60031 \
   -p 60034:60034 \
   --restart=always \
-  -d wcjiang/docs:1.1.0
+  -d wcjiang/docs:latest
 ```
 
 ## Port List
