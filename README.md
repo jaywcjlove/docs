@@ -20,6 +20,7 @@ docker run --name docs \
   -p 60008:60008 \
   -p 60009:60009 \
   -p 60010:60010 \
+  -p 60011:60011 \
   -p 60031:60031 \
   -p 60034:60034 \
   --restart=always \
@@ -38,6 +39,7 @@ docker run --name docs \
 - Port: `60008` - [expressjs.com/2x](http://expressjs.com/) old
 - Port: `60009` - [jestjs.io](https://jestjs.io/)
 - Port: `60010` - [element.eleme.io](https://element.eleme.io)
+- Port: `60011` - [element.react](https://elemefe.github.io/element-react)
 - Port: `60031` - [sequelize.org/v3](https://sequelize.org/v3/)
 - ~~Port: `60032` - [sequelize.org/v4](https://sequelize.org/v4/)~~ Too big
 - ~~Port: `60033` - [sequelize.org/v5](https://sequelize.org/v5/)~~ Too big
@@ -71,6 +73,7 @@ docker run --rm \
   -p 60008:60008 \
   -p 60009:60009 \
   -p 60010:60010 \
+  -p 60011:60011 \
   -p 60031:60031 \
   -p 60034:60034 \
   --name docs wcjiang/docs:1.1.0
