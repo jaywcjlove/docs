@@ -2,10 +2,6 @@
 	path = jestjs.io
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = jestjs.io
-[submodule "react-native"]
-	path = react-native
-	url = https://github.com/jaywcjlove/doc-static.git
-	branch = react-native
 [submodule "typeorm.github.io"]
 	path = typeorm.github.io
 	url = https://github.com/jaywcjlove/doc-static.git
@@ -38,3 +34,7 @@
 	path = expressjs.com
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = expressjs.com
+[submodule "react-native"]
+	path = react-native
+	url = https://github.com/jaywcjlove/react-native-doc.git
+	branch = gh-pages

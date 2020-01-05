@@ -23,7 +23,7 @@ docker run --name docs \
   -p 60031:60031 \
   -p 60034:60034 \
   --restart=always \
-  -d wcjiang/docs:1.0.0
+  -d wcjiang/docs:1.1.0
 ```
 
 ## Port List
@@ -55,9 +55,9 @@ $ git submodule foreach --recursive git submodule update
 ## Build Image
 
 ```bash
-$ docker image build -t docs .
+$ docker image build -t wcjiang/docs .
 # or
-$ docker image build -t docs:1.0.0 .
+$ docker image build -t wcjiang/docs:1.1.0 .
 ```
 
 ```bash
@@ -73,7 +73,7 @@ docker run --rm \
   -p 60010:60010 \
   -p 60031:60031 \
   -p 60034:60034 \
-  --name docs docs:1.0.0
+  --name docs wcjiang/docs:1.1.0
 ```
 
 ## Other
