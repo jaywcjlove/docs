@@ -25,10 +25,13 @@ jobs:
 
       - name: Tags
         run: |
-          docker tag docs ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
-          docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
 
-      - name: Push
-        run: |
-          docker push ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag docs ${{ secrets.DOCKER_USER }}/docs:$VERSION
+          docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
+          docker push ${{ secrets.DOCKER_USER }}/docs:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/docs:latest
