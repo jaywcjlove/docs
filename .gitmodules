@@ -38,7 +38,3 @@
 	path = react-native
 	url = https://github.com/jaywcjlove/react-native-doc.git
 	branch = gh-pages
-[submodule "element.react"]
-	path = element.react
-	url = https://github.com/jaywcjlove/doc-static.git
-	branch = element.react
