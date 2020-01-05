@@ -16,6 +16,7 @@ jobs:
           git submodule sync --recursive
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
+      # https://www.basefactor.com/github-actions-docker
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
@@ -27,19 +28,7 @@ jobs:
           docker tag docs ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
           docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
 
-  # # https://www.basefactor.com/github-actions-docker
-  # build-image:
-  #   runs-on: ubuntu-18.04
-  #   needs: get-static
-  #   steps: 
-
-  #     - name: Docker login
-  #       run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
-
-  #     - name: Build image
-  #       run: docker build -t docs .
-
-  #     - name: Tags
-  #       run: |
-  #         docker tag docs ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
-  #         docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
+      - name: Push
+        run: |
+          docker push ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/docs:latest
