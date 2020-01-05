@@ -29,9 +29,9 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build image
-        run: docker image build -t docs .
+        run: docker build -t docs .
 
       - name: Tags
         run: |
-          docker tag back ${{ secrets.DOCKER_USER }}/back:${{ github.sha }}
-          docker tag back ${{ secrets.DOCKER_USER }}/back:latest
+          docker tag docs ${{ secrets.DOCKER_USER }}/docs:${{ github.sha }}
+          docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
