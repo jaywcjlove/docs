@@ -34,11 +34,11 @@
 	path = expressjs.com/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = expressjs.com
-[submodule "gh-pages/code"]
-	path = gh-pages/code
-	url = https://github.com/jaywcjlove/react-native-doc.git
-	branch = gh-pages
 [submodule "element.react/code"]
 	path = element.react/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = element.react
+[submodule "react-native/code"]
+	path = react-native/code
+	url = https://github.com/jaywcjlove/react-native-doc.git
+	branch = gh-pages
