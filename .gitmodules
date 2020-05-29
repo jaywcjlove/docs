@@ -1,44 +1,44 @@
-[submodule "jestjs.io"]
-	path = jestjs.io
+[submodule "jestjs.io/code"]
+	path = jestjs.io/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = jestjs.io
-[submodule "typeorm.github.io"]
-	path = typeorm.github.io
+[submodule "typeorm.github.io/code"]
+	path = typeorm.github.io/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = typeorm.github.io
-[submodule "ant.design"]
-	path = ant.design
+[submodule "ant.design/code"]
+	path = ant.design/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = ant.design
-[submodule "koajs.com"]
-	path = koajs.com
+[submodule "koajs.com/code"]
+	path = koajs.com/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = koajs.com
-[submodule "zh-hans.reactjs.org"]
-	path = zh-hans.reactjs.org
+[submodule "zh-hans.reactjs.org/code"]
+	path = zh-hans.reactjs.org/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = zh-hans.reactjs.org
-[submodule "element.eleme.io"]
-	path = element.eleme.io
+[submodule "element.eleme.io/code"]
+	path = element.eleme.io/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = element.eleme.io
-[submodule "cn.vuejs.org"]
-	path = cn.vuejs.org
+[submodule "cn.vuejs.org/code"]
+	path = cn.vuejs.org/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = cn.vuejs.org
-[submodule "sequelize.org"]
-	path = sequelize.org
+[submodule "sequelize.org/code"]
+	path = sequelize.org/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = sequelize.org
-[submodule "expressjs.com"]
-	path = expressjs.com
+[submodule "expressjs.com/code"]
+	path = expressjs.com/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = expressjs.com
-[submodule "react-native"]
-	path = react-native
+[submodule "react-native/code"]
+	path = react-native/code
 	url = https://github.com/jaywcjlove/react-native-doc.git
 	branch = gh-pages
-[submodule "element-react"]
-	path = element-react
+[submodule "element-react/code"]
+	path = element-react/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = element.react
