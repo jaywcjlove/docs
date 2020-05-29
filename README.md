@@ -76,7 +76,7 @@ docker run --rm \
   -p 60011:60011 \
   -p 60031:60031 \
   -p 60034:60034 \
-  --name docs wcjiang/docs:1.1.0
+  --name docs wcjiang/docs:latest
 ```
 
 ## Other
