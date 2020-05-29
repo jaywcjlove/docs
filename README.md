@@ -3,24 +3,24 @@ Development Documentation.
 
 ![Docker to document](https://github.com/jaywcjlove/docs/workflows/Docker%20to%20document/badge.svg)
 
-Centralized management of various development documents. [Docker Repository.](https://hub.docker.com/r/wcjiang/docs) [Github](https://github.com/jaywcjlove/docs)
+Centralized management of various development documents. [Docker Repository.](https://hub.docker.com/r/wcjiang/docs)
 
-Docker Image | Version
----- | ----
-[@wcjiang/docs](https://hub.docker.com/r/wcjiang/docs) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/docs)
-[@wcjiang/ant.design](https://hub.docker.com/r/wcjiang/ant.design) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/ant.design)
-[@wcjiang/cn.vuejs.org](https://hub.docker.com/r/wcjiang/cn.vuejs.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/cn.vuejs.org)
-[@wcjiang/deno-manual-cn](https://hub.docker.com/r/wcjiang/deno-manual-cn) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/deno-manual-cn)
-[@wcjiang/element.react](https://hub.docker.com/r/wcjiang/element.react) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/element.react)
-[@wcjiang/element.eleme.io](https://hub.docker.com/r/wcjiang/element.eleme.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/element.eleme.io)
-[@wcjiang/expressjs.com](https://hub.docker.com/r/wcjiang/expressjs.com) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/expressjs.com)
-[@wcjiang/jestjs.io](https://hub.docker.com/r/wcjiang/jestjs.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/jestjs.io)
-[@wcjiang/koajs.com](https://hub.docker.com/r/wcjiang/koajs.com) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/koajs.com)
-[@wcjiang/react-native](https://hub.docker.com/r/wcjiang/react-native) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/react-native)
-[@wcjiang/sequelize.org](https://hub.docker.com/r/wcjiang/sequelize.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/sequelize.org)
-[@wcjiang/typeorm.github.io](https://hub.docker.com/r/wcjiang/typeorm.github.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/typeorm.github.io)
-[@wcjiang/zh-hans.reactjs.org](https://hub.docker.com/r/wcjiang/zh-hans.reactjs.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/zh-hans.reactjs.org)
-[@wcjiang/webpack.js.org](https://hub.docker.com/r/wcjiang/webpack.js.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/webpack.js.org)
+Docker Image | Version | Image Size | Docker Pull
+---- | ---- | ---- | ----
+[@wcjiang/docs](https://hub.docker.com/r/wcjiang/docs) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/docs) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/docs) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/docs)
+[@wcjiang/ant.design](https://hub.docker.com/r/wcjiang/ant.design) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/ant.design) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/ant.design) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/ant.design)
+[@wcjiang/cn.vuejs.org](https://hub.docker.com/r/wcjiang/cn.vuejs.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/cn.vuejs.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/cn.vuejs.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/cn.vuejs.org)
+[@wcjiang/deno-manual-cn](https://hub.docker.com/r/wcjiang/deno-manual-cn) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/deno-manual-cn) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/deno-manual-cn) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/deno-manual-cn)
+[@wcjiang/element.react](https://hub.docker.com/r/wcjiang/element.react) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/element.react) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/element.react) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/element.react)
+[@wcjiang/element.eleme.io](https://hub.docker.com/r/wcjiang/element.eleme.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/element.eleme.io) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/element.eleme.io) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/element.eleme.io)
+[@wcjiang/expressjs.com](https://hub.docker.com/r/wcjiang/expressjs.com) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/expressjs.com) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/expressjs.com) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/expressjs.com)
+[@wcjiang/jestjs.io](https://hub.docker.com/r/wcjiang/jestjs.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/jestjs.io) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/jestjs.io) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/jestjs.io)
+[@wcjiang/koajs.com](https://hub.docker.com/r/wcjiang/koajs.com) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/koajs.com) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/koajs.com) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/koajs.com)
+[@wcjiang/react-native](https://hub.docker.com/r/wcjiang/react-native) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/react-native) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/react-native) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/react-native)
+[@wcjiang/sequelize.org](https://hub.docker.com/r/wcjiang/sequelize.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/sequelize.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/sequelize.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/sequelize.org)
+[@wcjiang/typeorm.github.io](https://hub.docker.com/r/wcjiang/typeorm.github.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/typeorm.github.io) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/typeorm.github.io) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/typeorm.github.io)
+[@wcjiang/zh-hans.reactjs.org](https://hub.docker.com/r/wcjiang/zh-hans.reactjs.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/zh-hans.reactjs.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/zh-hans.reactjs.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/zh-hans.reactjs.org)
+[@wcjiang/webpack.js.org](https://hub.docker.com/r/wcjiang/webpack.js.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/webpack.js.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/webpack.js.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/webpack.js.org)
 
 ## Quick Start
 
