@@ -10,4 +10,4 @@ ADD ./code $APPDIR
 
 COPY web.conf /etc/nginx/conf.d
 
-EXPOSE 60031
+EXPOSE 60012
