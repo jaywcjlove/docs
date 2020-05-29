@@ -40,8 +40,8 @@ jobs:
 
       - name: Build cn.vuejs.org image
         run: |
-          cd ./cn\.vuejs\.org
-          docker build -t cn.vuejs.org.
+          cd ../cn\.vuejs\.org
+          docker build -t cn.vuejs.org .
 
       - name: docs Tags & Push
         run: |
