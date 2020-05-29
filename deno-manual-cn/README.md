@@ -10,5 +10,5 @@ docker pull wcjiang/deno-manual-cn:latest
 Run Server
 
 ```shell
-docker run --name ant.design -p 60035:60035 --restart=always -d wcjiang/deno-manual-cn:latest
+docker run --name deno-manual-cn -p 60035:60035 --restart=always -d wcjiang/deno-manual-cn:latest
 ```
