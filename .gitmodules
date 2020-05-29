@@ -6,14 +6,14 @@
 	path = typeorm.github.io/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = typeorm.github.io
-[submodule "ant.design/code"]
-	path = ant.design/code
-	url = https://github.com/jaywcjlove/doc-static.git
-	branch = ant.design
 [submodule "koajs.com/code"]
 	path = koajs.com/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = koajs.com
+[submodule "ant.design/code"]
+	path = ant.design/code
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = ant.design
 [submodule "zh-hans.reactjs.org/code"]
 	path = zh-hans.reactjs.org/code
 	url = https://github.com/jaywcjlove/doc-static.git
@@ -34,11 +34,11 @@
 	path = expressjs.com/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = expressjs.com
-[submodule "react-native/code"]
-	path = react-native/code
+[submodule "gh-pages/code"]
+	path = gh-pages/code
 	url = https://github.com/jaywcjlove/react-native-doc.git
 	branch = gh-pages
-[submodule "element-react/code"]
-	path = element-react/code
+[submodule "element.react/code"]
+	path = element.react/code
 	url = https://github.com/jaywcjlove/doc-static.git
 	branch = element.react
