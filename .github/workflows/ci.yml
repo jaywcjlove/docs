@@ -25,6 +25,7 @@ jobs:
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout sequelize.org
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout typeorm.github.io
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout zh-hans.reactjs.org
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout deno-manual-cn
 
       # https://www.basefactor.com/github-actions-docker
       - name: Docker login
@@ -234,3 +235,20 @@ jobs:
           docker tag zh-hans.reactjs.org ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
           docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
+
+      - name: Build deno-manual-cn image
+        run: |
+          cd ./zh-hans\.reactjs\.org
+          docker build -t deno-manual-cn .
+      - name: Tags & Push deno-manual-cn
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag deno-manual-cn ${{ secrets.DOCKER_USER }}/deno-manual-cn:$VERSION
+          docker tag deno-manual-cn ${{ secrets.DOCKER_USER }}/deno-manual-cn:latest
+          docker push ${{ secrets.DOCKER_USER }}/deno-manual-cn:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/deno-manual-cn:latest

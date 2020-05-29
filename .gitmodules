@@ -42,3 +42,7 @@
 	path = react-native/code
 	url = https://github.com/jaywcjlove/react-native-doc.git
 	branch = gh-pages
+[submodule "deno-manual-cn/code"]
+	path = deno-manual-cn/code
+	url = https://github.com/jaywcjlove/doc-static.git
+	branch = deno-manual-cn

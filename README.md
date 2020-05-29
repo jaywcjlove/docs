@@ -19,6 +19,7 @@ Docker Image | Version
 [@wcjiang/sequelize.org](https://hub.docker.com/r/wcjiang/sequelize.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/sequelize.org)
 [@wcjiang/typeorm.github.io](https://hub.docker.com/r/wcjiang/typeorm.github.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/typeorm.github.io)
 [@wcjiang/zh-hans.reactjs.org](https://hub.docker.com/r/wcjiang/zh-hans.reactjs.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/zh-hans.reactjs.org)
+[@wcjiang/deno-manual-cn](https://hub.docker.com/r/wcjiang/deno-manual-cn) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/deno-manual-cn)
 
 ## Quick Start
 
@@ -43,6 +44,7 @@ docker run --name docs \
   -p 60011:60011 \
   -p 60031:60031 \
   -p 60034:60034 \
+  -p 60035:60035 \
   --restart=always \
   -d wcjiang/docs:latest
 ```
@@ -76,6 +78,7 @@ docker run --name ant.design -p 60001:60001 --restart=always -d wcjiang/ant.desi
 - ~~Port: `60032` - [sequelize.org/v4](https://sequelize.org/v4/)~~ Too big
 - ~~Port: `60033` - [sequelize.org/v5](https://sequelize.org/v5/)~~ Too big
 - Port: `60034` - [sequelize.org/master](https://sequelize.org/) - [Github](https://github.com/sequelize/sequelize.org)
+- Port: `60035` - [deno-manual-cn](https://nugine.github.io/deno-manual-cn/) - [Github](https://github.com/Nugine/deno-manual-cn)
 
 ## Add Document
 
@@ -108,6 +111,7 @@ docker run --rm \
   -p 60011:60011 \
   -p 60031:60031 \
   -p 60034:60034 \
+  -p 60035:60035 \
   --name docs wcjiang/docs:latest
 ```
 
