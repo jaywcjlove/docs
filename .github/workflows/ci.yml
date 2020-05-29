@@ -35,8 +35,8 @@ jobs:
 
       - name: Build ant.design image
         run: |
-        cd ./ant\.design
-        docker build -t ant.design .
+          cd ./ant\.design
+          docker build -t ant.design .
 
       - name: docs Tags & Push
         run: |
