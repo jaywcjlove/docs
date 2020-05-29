@@ -38,6 +38,11 @@ jobs:
           cd ./ant\.design
           docker build -t ant.design .
 
+      - name: Build cn.vuejs.org image
+        run: |
+          cd ./cn\.vuejs\.org
+          docker build -t cn.vuejs.org.
+
       - name: docs Tags & Push
         run: |
           # Strip git ref prefix from version
@@ -50,3 +55,8 @@ jobs:
           docker tag docs ${{ secrets.DOCKER_USER }}/docs:latest
           docker push ${{ secrets.DOCKER_USER }}/docs:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/docs:latest
+
+          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
+          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:latest
+          docker push ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/ant.design:latest
