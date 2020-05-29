@@ -49,7 +49,7 @@ docker run --name docs \
   -d wcjiang/docs:latest
 ```
 
-## Independent deployment
+## Independent Deployment
 
 ```shell
 docker pull wcjiang/ant.design:latest
