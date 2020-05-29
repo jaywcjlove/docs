@@ -5,21 +5,19 @@
 # https://docs.docker.com/engine/reference/builder/#dockerignore-file
 
 *.git
-ant.design/.git
-cn.eslint.org/.git
-cn.vuejs.org/.git
-cn.vuejs.org/v2
-element/.git
-element.react/.git
-element/1.*
-element/2.*
-expressjs.com/.git
-koajs.com/.git
-react-native/.git
-jestjs.io/.git
-sequelize.org/.git
-typeorm.github.io/.git
-zh-hans.reactjs.org/.git
+ant.design/code/.git
+cn.vuejs.org/code/.git
+deno-manual-cn/code/.git
+element.eleme.io/code/.git
+element.react/code/.git
+expressjs.com/code/.git
+jestjs.io/code/.git
+koajs.com/code/.git
+react-native/code/.git
+sequelize.org/code/.git
+typeorm.github.io/code/.git
+webpack.js.org/code/.git
+zh-hans.reactjs.org/code/.git
 
 # consider them hidden
 .*
