@@ -6,7 +6,7 @@ RUN mkdir -p $APPDIR
 
 WORKDIR $APPDIR
 
-ADD ./code $APPDIR
+ADD ./code/master $APPDIR
 
 COPY web.conf /etc/nginx/conf.d
 
