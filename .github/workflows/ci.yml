@@ -37,6 +37,7 @@ jobs:
           git clone https://github.com/jaywcjlove/react-native-doc.git -b gh-pages react-native/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b sequelize.org sequelize.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
+          git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
 
       # https://www.basefactor.com/github-actions-docker
@@ -264,3 +265,20 @@ jobs:
           docker tag deno-manual-cn ${{ secrets.DOCKER_USER }}/deno-manual-cn:latest
           docker push ${{ secrets.DOCKER_USER }}/deno-manual-cn:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/deno-manual-cn:latest
+
+      - name: Build webpack.js.org image
+        run: |
+          cd ./webpack\.js\.org
+          docker build -t webpack.js.org .
+      - name: Tags & Push webpack.js.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
+          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
