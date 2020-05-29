@@ -1,11 +1,14 @@
 Development Documentation.
 ----
 
+![Docker to document](https://github.com/jaywcjlove/docs/workflows/Docker%20to%20document/badge.svg)
+
 Centralized management of various development documents. [Docker Repository.](https://hub.docker.com/r/wcjiang/docs) [Github](https://github.com/jaywcjlove/docs)
 
 ## Quick Start
 
 ```bash
+# Contains all documents
 docker pull wcjiang/docs:latest
 ```
 
@@ -27,6 +30,18 @@ docker run --name docs \
   -p 60034:60034 \
   --restart=always \
   -d wcjiang/docs:latest
+```
+
+## Independent deployment
+
+```shell
+docker pull wcjiang/ant.design:latest
+```
+
+Run Server
+
+```shell
+docker run --name ant.design -p 60001:60001 --restart=always -d wcjiang/ant.design:latest
 ```
 
 ## Port List
