@@ -13,19 +13,31 @@ jobs:
         shell: bash
         run: |
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-          git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout ant.design
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout cn.vuejs.org
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.react
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.eleme.io
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout expressjs.com
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout jestjs.io
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout koajs.com
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout react-native
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout sequelize.org
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout typeorm.github.io
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout zh-hans.reactjs.org
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout deno-manual-cn
+          # git submodule sync --recursive
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout ant.design
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout cn.vuejs.org
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout deno-manual-cn
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.react
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.eleme.io
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout expressjs.com
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout jestjs.io
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout koajs.com
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout react-native
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout sequelize.org
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout typeorm.github.io
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout zh-hans.reactjs.org
+          git clone https://github.com/jaywcjlove/doc-static.git -b ant.design ant.design/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b cn.vuejs.org cn.vuejs.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b deno-manual-cn deno-manual-cn/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b element.react element.react/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b element.eleme.io element.eleme.io/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b expressjs.com expressjs.com/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b jestjs.io jestjs.io/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b koajs.com koajs.com/code --depth 1
+          git clone https://github.com/jaywcjlove/react-native-doc.git -b react-native react-native/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b sequelize.org sequelize.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
 
       # https://www.basefactor.com/github-actions-docker
       - name: Docker login
