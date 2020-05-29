@@ -10,5 +10,5 @@ docker pull wcjiang/sequelize.org:latest
 Run Server
 
 ```shell
-docker run --name sequelize.org -p 60001:60001 --restart=always -d wcjiang/sequelize.org:latest
+docker run --name sequelize.org -p 60034:60034 --restart=always -d wcjiang/sequelize.org:latest
 ```

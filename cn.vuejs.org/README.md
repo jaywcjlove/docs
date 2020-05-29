@@ -10,5 +10,5 @@ docker pull wcjiang/cn.vuejs.org:latest
 Run Server
 
 ```shell
-docker run --name ant.design -p 60001:60001 --restart=always -d wcjiang/cn.vuejs.org:latest
+docker run --name ant.design -p 60003:60003 --restart=always -d wcjiang/cn.vuejs.org:latest
 ```

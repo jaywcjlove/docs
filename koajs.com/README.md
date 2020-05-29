@@ -10,5 +10,5 @@ docker pull wcjiang/koajs.com:latest
 Run Server
 
 ```shell
-docker run --name koajs.com -p 60001:60001 --restart=always -d wcjiang/koajs.com:latest
+docker run --name koajs.com -p 60004:60004 --restart=always -d wcjiang/koajs.com:latest
 ```

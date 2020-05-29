@@ -10,5 +10,5 @@ docker pull wcjiang/element.eleme.io:latest
 Run Server
 
 ```shell
-docker run --name element.eleme.io -p 60001:60001 --restart=always -d wcjiang/element.eleme.io:latest
+docker run --name element.eleme.io -p 60010:60010 --restart=always -d wcjiang/element.eleme.io:latest
 ```

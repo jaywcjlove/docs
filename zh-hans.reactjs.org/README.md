@@ -10,5 +10,5 @@ docker pull wcjiang/zh-hans.reactjs.org:latest
 Run Server
 
 ```shell
-docker run --name zh-hans.reactjs.org -p 60001:60001 --restart=always -d wcjiang/zh-hans.reactjs.org:latest
+docker run --name zh-hans.reactjs.org -p 60007:60007 --restart=always -d wcjiang/zh-hans.reactjs.org:latest
 ```
