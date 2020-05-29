@@ -6,24 +6,23 @@ RUN mkdir -p $APPDIR
 
 WORKDIR $APPDIR
 
-ADD ./ant.design $APPDIR/ant.design
-# ADD ./cn.eslint.org $APPDIR/cn.eslint.org
-ADD ./cn.vuejs.org $APPDIR/cn.vuejs.org
-ADD ./element.eleme.io/2.13 $APPDIR/element.eleme.io
+ADD ./ant.design/code $APPDIR/ant.design
+# ADD ./cn.eslint.org/code $APPDIR/cn.eslint.org
+ADD ./cn.vuejs.org/code $APPDIR/cn.vuejs.org
+ADD ./element.eleme.io/code/2.13 $APPDIR/element.eleme.io
 
-ADD ./expressjs.com/2x $APPDIR/expressjs.com/2x
+ADD ./expressjs.com/code/2x $APPDIR/expressjs.com/2x
 
-ADD ./koajs.com $APPDIR/koajs.com
-ADD ./jestjs.io $APPDIR/jestjs.io
-ADD ./react-native $APPDIR/react-native
-ADD ./typeorm.github.io $APPDIR/typeorm.github.io
-ADD ./zh-hans.reactjs.org $APPDIR/zh-hans.reactjs.org
+ADD ./koajs.com/code $APPDIR/koajs.com
+ADD ./jestjs.io/code $APPDIR/jestjs.io
+ADD ./react-native/code $APPDIR/react-native
+ADD ./typeorm.github.io/code $APPDIR/typeorm.github.io
+ADD ./zh-hans.reactjs.org/code $APPDIR/zh-hans.reactjs.org
 
-
-ADD ./sequelize.org/v3 $APPDIR/sequelize.org/v3
-# ADD ./sequelize.org/v4 $APPDIR/sequelize.org/v4
-# ADD ./sequelize.org/v5 $APPDIR/sequelize.org/v5
-ADD ./sequelize.org/master $APPDIR/sequelize.org/master
+ADD ./sequelize.org/code/v3 $APPDIR/sequelize.org/v3
+# ADD ./sequelize.org/code/v4 $APPDIR/sequelize.org/v4
+# ADD ./sequelize.org/code/v5 $APPDIR/sequelize.org/v5
+ADD ./sequelize.org/code/master $APPDIR/sequelize.org/master
 
 COPY nginx/web.conf /etc/nginx/conf.d
 
