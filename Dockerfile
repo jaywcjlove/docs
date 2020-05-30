@@ -1,4 +1,3 @@
-# 构建镜像的基础源镜像
 FROM nginx:1.18.0
 
 ENV APPDIR /usr/share/nginx/web
@@ -9,7 +8,7 @@ WORKDIR $APPDIR
 
 RUN echo $PWD/nginx/web.conf
 COPY $PWD/nginx/web.conf /etc/nginx/conf.d
-RUN cat /etc/nginx/conf.d/nginx/web.conf
+RUN cat /etc/nginx/conf.d/web.conf
 
 ADD ./ant.design/code $APPDIR/ant.design
 # ADD ./cn.eslint.org/code $APPDIR/cn.eslint.org
