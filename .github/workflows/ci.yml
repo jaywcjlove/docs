@@ -41,6 +41,7 @@ jobs:
           git clone https://github.com/uiwjs/uiwjs.github.io.git -b master uiwjs.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b v2 --single-branch typescriptlang.org/code --depth 1
           
       # View the directory size and order by command, See if you need to reduce the size.
       - name: Echo directory size and order
@@ -321,3 +322,20 @@ jobs:
           docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
           docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
+
+      - name: Build typescriptlang.org image
+        run: |
+          cd ./typescriptlang\.org
+          docker build -t typescriptlang.org .
+      - name: Tags & Push typescriptlang.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag typescriptlang.org ${{ secrets.DOCKER_USER }}/typescriptlang.org:$VERSION
+          docker tag typescriptlang.org ${{ secrets.DOCKER_USER }}/typescriptlang.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/typescriptlang.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/typescriptlang.org:latest

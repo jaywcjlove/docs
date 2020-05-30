@@ -48,6 +48,10 @@ services:
     image: wcjiang/typeorm.github.io:latest
     ports:
       - 60006:60006
+  typescriptlang.org:
+    image: wcjiang/typescriptlang.org:latest
+    ports:
+      - 60015:60015
   uiwjs.github.io:
     image: wcjiang/uiwjs.github.io:latest
     ports:
