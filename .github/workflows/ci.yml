@@ -45,7 +45,9 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build docs image
-        run: docker build -t docs .
+        run: |
+          cat ./nginx/web.conf
+          docker build -t docs .
 
       - name: Tags & Push docs
         run: |
@@ -63,6 +65,7 @@ jobs:
       - name: Build ant.design image
         run: |
           cd ./ant\.design
+          cat ./web.conf
           docker build -t ant.design .
 
       - name: Tags & Push ant.design
@@ -252,6 +255,7 @@ jobs:
       - name: Build deno-manual-cn image
         run: |
           cd ./zh-hans\.reactjs\.org
+          cat ./web.conf
           docker build -t deno-manual-cn .
       - name: Tags & Push deno-manual-cn
         run: |
