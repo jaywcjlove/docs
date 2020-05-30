@@ -30,6 +30,7 @@ ADD ./sequelize.org/code/master $APPDIR/sequelize.org/master
 RUN mkdir -p $APPDIR/webpack.js.org
 ADD ./webpack.js.org/code $APPDIR/webpack.js.org
 
+RUN cat nginx/web.conf
 COPY nginx/web.conf /etc/nginx/conf.d
 
 EXPOSE 60001 60002 60003 60004 60005 60006 60031 60032 60033 60034

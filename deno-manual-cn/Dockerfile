@@ -8,6 +8,7 @@ WORKDIR $APPDIR
 
 ADD ./code $APPDIR
 
+RUN cat web.conf
 COPY web.conf /etc/nginx/conf.d
 
 EXPOSE 60013
