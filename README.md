@@ -21,6 +21,7 @@ Docker Image | Port/Github | Version | Image Size | Docker Pull
 [@wcjiang/typeorm.github.io](https://hub.docker.com/r/wcjiang/typeorm.github.io) | 60006| ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/typeorm.github.io) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/typeorm.github.io) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/typeorm.github.io)
 [@wcjiang/zh-hans.reactjs.org](https://hub.docker.com/r/wcjiang/zh-hans.reactjs.org) | 60007| ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/zh-hans.reactjs.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/zh-hans.reactjs.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/zh-hans.reactjs.org)
 [@wcjiang/webpack.js.org](https://hub.docker.com/r/wcjiang/webpack.js.org) | 60012/[Github](https://github.com/webpack/webpack.js.org) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/webpack.js.org) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/webpack.js.org) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/webpack.js.org)
+[@wcjiang/uiwjs.github.io](https://hub.docker.com/r/wcjiang/uiwjs.github.io) | 60066/[Github](https://github.com/uiwjs/uiwjs.github.io) | ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/uiwjs.github.io) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/uiwjs.github.io) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/uiwjs.github.io)
 
 ## Port List
 
@@ -49,7 +50,9 @@ docker run --name docs \
   -p 60009:60009 \
   -p 60010:60010 \
   -p 60011:60011 \
-  -p 60011:60012 \
+  -p 60012:60012 \
+  -p 60013:60013 \
+  -p 60066:60066 \
   -p 60031:60031 \
   -p 60034:60034 \
   -p 60035:60035 \
