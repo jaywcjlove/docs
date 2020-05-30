@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-      - name: Checkout submodules
+      - name: Clone sub repository
         shell: bash
         run: |
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
@@ -39,7 +39,10 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
-          du -sk * | sort -n
+          
+      # View the directory size and order by command, See if you need to reduce the size.
+      - name: Echo directory size and order
+        run: du -skh * | sort -n
 
       # https://www.basefactor.com/github-actions-docker
       - name: Docker login
@@ -64,7 +67,6 @@ jobs:
       - name: Build ant.design image
         run: |
           cd ./ant\.design
-          cat ./web.conf
           docker build -t ant.design .
 
       - name: Tags & Push ant.design
@@ -253,8 +255,7 @@ jobs:
 
       - name: Build deno-manual-cn image
         run: |
-          cd ./zh-hans\.reactjs\.org
-          cat ./web.conf
+          cd ./deno-manual-cn
           docker build -t deno-manual-cn .
       - name: Tags & Push deno-manual-cn
         run: |
