@@ -1,0 +1,63 @@
+version: '3'
+services:
+  ant.design:
+    image: wcjiang/ant.design:latest
+    ports:
+      - 60001:60001
+  cn.vuejs.org:
+    image: wcjiang/cn.vuejs.org:latest
+    ports:
+      - 60003:60003
+  deno-manual-cn:
+    image: wcjiang/deno-manual-cn:latest
+    ports:
+      - 60013:60013
+  element.eleme.io:
+    image: wcjiang/element.eleme.io:latest
+    ports:
+      - 60010:60010
+  element.react:
+    image: wcjiang/element.react:latest
+    ports:
+      - 60011:60011
+  expressjs.com:
+    image: wcjiang/expressjs.com:latest
+    ports:
+      - 60008:60008
+  graphql.github.io:
+    image: wcjiang/graphql.github.io:latest
+    ports:
+      - 60014:60014
+  jestjs.io:
+    image: wcjiang/jestjs.io:latest
+    ports:
+      - 60009:60009
+  koajs.com:
+    image: wcjiang/koajs.com:latest
+    ports:
+      - 60004:60004
+  react-native:
+    image: wcjiang/react-native:latest
+    ports:
+      - 60005:60005
+  sequelize.org:
+    image: wcjiang/sequelize.org:latest
+    ports:
+      - 60031:60031
+  typeorm.github.io:
+    image: wcjiang/typeorm.github.io:latest
+    ports:
+      - 60006:60006
+  uiwjs.github.io:
+    image: wcjiang/uiwjs.github.io:latest
+    ports:
+      - 60066:60066
+  webpack.js.org:
+    image: wcjiang/webpack.js.org:latest
+    ports:
+      - 60012:60012
+  zh-hans.reactjs.org:
+    image: wcjiang/zh-hans.reactjs.org:latest
+    ports:
+      - 60007:60007
+
