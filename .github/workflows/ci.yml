@@ -254,6 +254,23 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/typeorm.github.io:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/typeorm.github.io:latest
 
+      - name: Build uiwjs.github.io image
+        run: |
+          cd ./uiwjs\.github\.io
+          docker build -t uiwjs.github.io .
+      - name: Tags & Push uiwjs.github.io
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag uiwjs.github.io ${{ secrets.DOCKER_USER }}/uiwjs.github.io:$VERSION
+          docker tag uiwjs.github.io ${{ secrets.DOCKER_USER }}/uiwjs.github.io:latest
+          docker push ${{ secrets.DOCKER_USER }}/uiwjs.github.io:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/uiwjs.github.io:latest
+
       - name: Build zh-hans.reactjs.org image
         run: |
           cd ./zh-hans\.reactjs\.org
