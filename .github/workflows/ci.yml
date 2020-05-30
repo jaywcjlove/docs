@@ -37,7 +37,7 @@ jobs:
           git clone https://github.com/jaywcjlove/react-native-doc.git -b gh-pages react-native/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b sequelize.org sequelize.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
-          git clone https://github.com/uiwjs/uiwjs.github.io.git -b gh-pages uiwjs.github.io/code --depth 1
+          git clone https://github.com/uiwjs/uiwjs.github.io.git -b master uiwjs.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
           
