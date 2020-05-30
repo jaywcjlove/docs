@@ -41,7 +41,7 @@ jobs:
           git clone https://github.com/uiwjs/uiwjs.github.io.git -b master uiwjs.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
-          git clone https://github.com/jaywcjlove/doc-static.git -b v2 --single-branch typescriptlang.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b typescriptlang.org --single-branch typescriptlang.org/code --depth 1
           
       # View the directory size and order by command, See if you need to reduce the size.
       - name: Echo directory size and order
