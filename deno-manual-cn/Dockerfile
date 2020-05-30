@@ -8,7 +8,6 @@ WORKDIR $APPDIR
 
 ADD ./code $APPDIR
 
-RUN cat web.conf
 COPY web.conf /etc/nginx/conf.d
 RUN cat /etc/nginx/conf.d/web.conf
 
