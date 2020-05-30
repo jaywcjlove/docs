@@ -32,6 +32,7 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b element.react element.react/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b element.eleme.io element.eleme.io/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b expressjs.com expressjs.com/code --depth 1
+          git clone https://github.com/graphql/graphql.github.io.git -b master graphql.github.io/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b jestjs.io jestjs.io/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b koajs.com koajs.com/code --depth 1
           git clone https://github.com/jaywcjlove/react-native-doc.git -b gh-pages react-native/code --depth 1
@@ -151,6 +152,22 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/expressjs.com:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/expressjs.com:latest
 
+      - name: Build graphql.github.io image
+        run: |
+          cd ./graphql\.github\.io
+          docker build -t graphql.github.io .
+      - name: Tags & Push graphql.github.io
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag graphql.github.io ${{ secrets.DOCKER_USER }}/graphql.github.io:$VERSION
+          docker tag graphql.github.io ${{ secrets.DOCKER_USER }}/graphql.github.io:latest
+          docker push ${{ secrets.DOCKER_USER }}/graphql.github.io:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/graphql.github.io:latest
 
       - name: Build jestjs.io image
         run: |
