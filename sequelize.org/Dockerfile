@@ -9,5 +9,6 @@ WORKDIR $APPDIR
 ADD ./code/master $APPDIR
 
 COPY web.conf /etc/nginx/conf.d
+RUN cat /etc/nginx/conf.d/web.conf
 
 EXPOSE 60031
