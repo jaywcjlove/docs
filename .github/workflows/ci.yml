@@ -39,6 +39,7 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
+          du -sk * | sort -n
 
       # https://www.basefactor.com/github-actions-docker
       - name: Docker login
