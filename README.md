@@ -77,11 +77,11 @@ docker run --name ant.design -p 60001:60001 --restart=always -d wcjiang/ant.desi
 - Port: `60010` - [element.eleme.io](https://element.eleme.io)
 - Port: `60011` - [element.react](https://elemefe.github.io/element-react)
 - Port: `60012` - [webpack.js.org](https://webpack.js.org/) - [Github](https://github.com/webpack/webpack.js.org)
+- Port: `60013` - [deno-manual-cn](https://nugine.github.io/deno-manual-cn/) - [Github](https://github.com/Nugine/deno-manual-cn)
 - Port: `60031` - [sequelize.org/v3](https://sequelize.org/v3/)
 - ~~Port: `60032` - [sequelize.org/v4](https://sequelize.org/v4/)~~ Too big
 - ~~Port: `60033` - [sequelize.org/v5](https://sequelize.org/v5/)~~ Too big
 - Port: `60034` - [sequelize.org/master](https://sequelize.org/) - [Github](https://github.com/sequelize/sequelize.org)
-- Port: `60035` - [deno-manual-cn](https://nugine.github.io/deno-manual-cn/) - [Github](https://github.com/Nugine/deno-manual-cn)
 
 ## Add Document
 
@@ -104,18 +104,6 @@ $ docker image build -t wcjiang/docs:1.1.0 .
 docker run --rm \
   -p 60001:60001 \
   -p 60003:60003 \
-  -p 60004:60004 \
-  -p 60005:60005 \
-  -p 60006:60006 \
-  -p 60007:60007 \
-  -p 60008:60008 \
-  -p 60009:60009 \
-  -p 60010:60010 \
-  -p 60011:60011 \
-  -p 60011:60012 \
-  -p 60031:60031 \
-  -p 60034:60034 \
-  -p 60035:60035 \
   --name docs wcjiang/docs:latest
 ```
 
