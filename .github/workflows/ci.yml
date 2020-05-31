@@ -43,7 +43,7 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typescriptlang.org --single-branch typescriptlang.org/code --depth 1
           git clone https://github.com/ng-docs/preview.angular.cn.git -b master --single-branch angular.cn/code --depth 1
-          git clone https://github.com/eslint/cn.eslint.org.git -b gh-pages --single-branch cn.eslint.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b eslint.org --single-branch cn.eslint.org/code --depth 1
           
       # View the directory size and order by command, See if you need to reduce the size.
       - name: Echo directory size and order
