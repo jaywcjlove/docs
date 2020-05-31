@@ -1,5 +1,9 @@
 version: '3'
 services:
+  angular.cn:
+    image: wcjiang/angular.cn:latest
+    ports:
+      - 60016:60016
   ant.design:
     image: wcjiang/ant.design:latest
     ports:

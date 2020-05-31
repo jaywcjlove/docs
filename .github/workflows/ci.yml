@@ -42,6 +42,7 @@ jobs:
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typescriptlang.org --single-branch typescriptlang.org/code --depth 1
+          git clone https://github.com/ng-docs/preview.angular.cn.git -b master --single-branch angular.cn/code --depth 1
           
       # View the directory size and order by command, See if you need to reduce the size.
       - name: Echo directory size and order
@@ -339,3 +340,20 @@ jobs:
           docker tag typescriptlang.org ${{ secrets.DOCKER_USER }}/typescriptlang.org:latest
           docker push ${{ secrets.DOCKER_USER }}/typescriptlang.org:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/typescriptlang.org:latest
+
+      - name: Build angular.cn image
+        run: |
+          cd ./angular\.cn
+          docker build -t angular.cn .
+      - name: Tags & Push angular.cn
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
+          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:latest
+          docker push ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/angular.cn:latest
