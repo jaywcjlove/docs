@@ -43,6 +43,7 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typescriptlang.org --single-branch typescriptlang.org/code --depth 1
           git clone https://github.com/ng-docs/preview.angular.cn.git -b master --single-branch angular.cn/code --depth 1
+          git clone https://github.com/eslint/cn.eslint.org.git -b gh-pages --single-branch cn.eslint.org/code --depth 1
           
       # View the directory size and order by command, See if you need to reduce the size.
       - name: Echo directory size and order
@@ -357,3 +358,20 @@ jobs:
           docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:latest
           docker push ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/angular.cn:latest
+
+      - name: Build cn.eslint.org image
+        run: |
+          cd ./cn\.eslint\.org
+          docker build -t cn.eslint.org .
+      - name: Tags & Push cn.eslint.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
+          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest

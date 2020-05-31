@@ -1,4 +1,4 @@
-cn.vuejs.org:
+cn.vuejs.org
 ---
 
 > Port: `60003` - [cn.vuejs.org](https://cn.vuejs.org/) - [Github](https://github.com/vuejs/cn.vuejs.org)

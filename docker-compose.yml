@@ -8,6 +8,10 @@ services:
     image: wcjiang/ant.design:latest
     ports:
       - 60001:60001
+  cn.eslint.org:
+    image: wcjiang/ant.design:latest
+    ports:
+      - 60017:60017
   cn.vuejs.org:
     image: wcjiang/cn.vuejs.org:latest
     ports:
