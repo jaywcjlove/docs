@@ -10,5 +10,5 @@ docker pull wcjiang/cn.eslint.org:latest
 Run Server
 
 ```shell
-docker run --name ant.design -p 60017:60017 --restart=always -d wcjiang/cn.eslint.org:latest
+docker run --name cn.eslint.org -p 60017:60017 --restart=always -d wcjiang/cn.eslint.org:latest
 ```
