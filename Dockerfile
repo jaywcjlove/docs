@@ -1,4 +1,4 @@
-FROM nginx:1.19.1
+FROM nginx:1.19.2
 
 ENV APPDIR /usr/share/nginx/web
 RUN mkdir -p $APPDIR 
