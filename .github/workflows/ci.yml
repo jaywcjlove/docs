@@ -40,7 +40,7 @@ jobs:
           git clone https://github.com/jaywcjlove/doc-static.git -b typeorm.github.io typeorm.github.io/code --depth 1
           git clone https://github.com/uiwjs/uiwjs.github.io.git -b master uiwjs.github.io/code --depth 1
           git clone https://github.com/webpack/webpack.js.org.git -b gh-pages webpack.js.org/code --depth 1
-          git clone https://github.com/jaywcjlove/doc-static.git -b zh-hans.reactjs.org zh-hans.reactjs.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b reactjs zh-hans.reactjs.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b typescriptlang.org --single-branch typescriptlang.org/code --depth 1
           git clone https://github.com/ng-docs/preview.angular.cn.git -b master --single-branch angular.cn/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b eslint.org --single-branch cn.eslint.org/code --depth 1
