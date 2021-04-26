@@ -1,5 +1,5 @@
 # 构建镜像的基础源镜像
-FROM nginx:1.19.6
+FROM nginx:1.20.0
 
 ENV APPDIR /usr/share/nginx/web
 RUN mkdir -p $APPDIR 
