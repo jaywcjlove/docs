@@ -3,11 +3,11 @@ services:
   angular.cn:
     image: wcjiang/angular.cn:latest
     ports:
-      - 60016:60016
+      - 60016:80
   ant.design:
     image: wcjiang/ant.design:latest
     ports:
-      - 60001:60001
+      - 60001:80
   cn.eslint.org:
     image: wcjiang/ant.design:latest
     ports:
