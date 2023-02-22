@@ -14,6 +14,7 @@ ADD ./angular.cn/code $APPDIR/angular.cn
 ADD ./ant.design/code $APPDIR/ant.design
 ADD ./cn.eslint.org/code $APPDIR/cn.eslint.org
 ADD ./cn.vuejs.org/code $APPDIR/cn.vuejs.org
+ADD ./v2.cn.vuejs.org/code $APPDIR/v2.cn.vuejs.org
 ADD ./deno-manual-cn/code $APPDIR/deno-manual-cn
 ADD ./element.eleme.io/code $APPDIR/element.eleme.io
 ADD ./element.react/code $APPDIR/element.react

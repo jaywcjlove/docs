@@ -15,7 +15,7 @@ jobs:
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
           # git submodule sync --recursive
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout ant.design
-          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout cn.vuejs.org
+          # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout v2.cn.vuejs.org
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout deno-manual-cn
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.react
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout element.eleme.io
@@ -27,7 +27,8 @@ jobs:
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout typeorm.github.io
           # git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --remote --force --recursive --checkout zh-hans.reactjs.org
           git clone https://github.com/jaywcjlove/doc-static.git -b ant.design ant.design/code --depth 1
-          git clone https://github.com/jaywcjlove/doc-static.git -b cn.vuejs.org cn.vuejs.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b v2.cn.vuejs.org v2.cn.vuejs.org/code --depth 1
+          git clone https://github.com/jaywcjlove/doc-static.git -b v3.cn.vuejs.org cn.vuejs.org/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b deno-manual-cn deno-manual-cn/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b element.react element.react/code --depth 1
           git clone https://github.com/jaywcjlove/doc-static.git -b element.eleme.io element.eleme.io/code --depth 1
@@ -103,6 +104,23 @@ jobs:
           docker tag cn.vuejs.org ${{ secrets.DOCKER_USER }}/cn.vuejs.org:latest
           docker push ${{ secrets.DOCKER_USER }}/cn.vuejs.org:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/cn.vuejs.org:latest
+
+      - name: Build v2.cn.vuejs.org image
+        run: |
+          cd ./v2\.cn\.vuejs\.org
+          docker build -t v2.cn.vuejs.org .
+      - name: Tags & Push v2.cn.vuejs.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          docker tag v2.cn.vuejs.org ${{ secrets.DOCKER_USER }}/v2.cn.vuejs.org:$VERSION
+          docker tag v2.cn.vuejs.org ${{ secrets.DOCKER_USER }}/v2.cn.vuejs.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/v2.cn.vuejs.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/v2.cn.vuejs.org:latest
 
       - name: Build element.react image
         run: |

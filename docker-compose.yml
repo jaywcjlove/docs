@@ -16,6 +16,10 @@ services:
     image: wcjiang/cn.vuejs.org:latest
     ports:
       - 60003:60003
+  v2.cn.vuejs.org:
+    image: wcjiang/cn.vuejs.org:latest
+    ports:
+      - 60018:60018
   deno-manual-cn:
     image: wcjiang/deno-manual-cn:latest
     ports:
