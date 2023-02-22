@@ -71,6 +71,22 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/docs:latest
 
       # DO_NOT_DELETE_START
+      - name: Build angular.cn image
+        working-directory: ./angular.cn
+        run: docker build -t angular.cn .
+
+      - name: Tags & Push angular.cn
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
+          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:latest
+          docker push ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/angular.cn:latest
+
+
       - name: Build cn.vuejs.org image
         working-directory: ./cn.vuejs.org
         run: docker build -t cn.vuejs.org .
@@ -87,52 +103,20 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/cn.vuejs.org:latest
 
 
-      - name: Build cn.eslint.org image
-        working-directory: ./cn.eslint.org
-        run: docker build -t cn.eslint.org .
+      - name: Build ant.design image
+        working-directory: ./ant.design
+        run: docker build -t ant.design .
 
-      - name: Tags & Push cn.eslint.org
+      - name: Tags & Push ant.design
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
-          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest
-          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest
-
-
-      - name: Build element.react image
-        working-directory: ./element.react
-        run: docker build -t element.react .
-
-      - name: Tags & Push element.react
-        run: |
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag element.react ${{ secrets.DOCKER_USER }}/element.react:$VERSION
-          docker tag element.react ${{ secrets.DOCKER_USER }}/element.react:latest
-          docker push ${{ secrets.DOCKER_USER }}/element.react:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/element.react:latest
-
-
-      - name: Build expressjs.com image
-        working-directory: ./expressjs.com
-        run: docker build -t expressjs.com .
-
-      - name: Tags & Push expressjs.com
-        run: |
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag expressjs.com ${{ secrets.DOCKER_USER }}/expressjs.com:$VERSION
-          docker tag expressjs.com ${{ secrets.DOCKER_USER }}/expressjs.com:latest
-          docker push ${{ secrets.DOCKER_USER }}/expressjs.com:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/expressjs.com:latest
+          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
+          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:latest
+          docker push ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/ant.design:latest
 
 
       - name: Build graphql.github.io image
@@ -151,36 +135,36 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/graphql.github.io:latest
 
 
-      - name: Build angular.cn image
-        working-directory: ./angular.cn
-        run: docker build -t angular.cn .
+      - name: Build element.eleme.io image
+        working-directory: ./element.eleme.io
+        run: docker build -t element.eleme.io .
 
-      - name: Tags & Push angular.cn
+      - name: Tags & Push element.eleme.io
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
-          docker tag angular.cn ${{ secrets.DOCKER_USER }}/angular.cn:latest
-          docker push ${{ secrets.DOCKER_USER }}/angular.cn:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/angular.cn:latest
+          docker tag element.eleme.io ${{ secrets.DOCKER_USER }}/element.eleme.io:$VERSION
+          docker tag element.eleme.io ${{ secrets.DOCKER_USER }}/element.eleme.io:latest
+          docker push ${{ secrets.DOCKER_USER }}/element.eleme.io:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/element.eleme.io:latest
 
 
-      - name: Build react-native image
-        working-directory: ./react-native
-        run: docker build -t react-native .
+      - name: Build element.react image
+        working-directory: ./element.react
+        run: docker build -t element.react .
 
-      - name: Tags & Push react-native
+      - name: Tags & Push element.react
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag react-native ${{ secrets.DOCKER_USER }}/react-native:$VERSION
-          docker tag react-native ${{ secrets.DOCKER_USER }}/react-native:latest
-          docker push ${{ secrets.DOCKER_USER }}/react-native:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/react-native:latest
+          docker tag element.react ${{ secrets.DOCKER_USER }}/element.react:$VERSION
+          docker tag element.react ${{ secrets.DOCKER_USER }}/element.react:latest
+          docker push ${{ secrets.DOCKER_USER }}/element.react:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/element.react:latest
 
 
       - name: Build jestjs.io image
@@ -197,6 +181,22 @@ jobs:
           docker tag jestjs.io ${{ secrets.DOCKER_USER }}/jestjs.io:latest
           docker push ${{ secrets.DOCKER_USER }}/jestjs.io:$VERSION
           docker push ${{ secrets.DOCKER_USER }}/jestjs.io:latest
+
+
+      - name: Build react-native image
+        working-directory: ./react-native
+        run: docker build -t react-native .
+
+      - name: Tags & Push react-native
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          docker tag react-native ${{ secrets.DOCKER_USER }}/react-native:$VERSION
+          docker tag react-native ${{ secrets.DOCKER_USER }}/react-native:latest
+          docker push ${{ secrets.DOCKER_USER }}/react-native:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/react-native:latest
 
 
       - name: Build sequelize.org image
@@ -231,22 +231,6 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/typeorm.github.io:latest
 
 
-      - name: Build koajs.com image
-        working-directory: ./koajs.com
-        run: docker build -t koajs.com .
-
-      - name: Tags & Push koajs.com
-        run: |
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag koajs.com ${{ secrets.DOCKER_USER }}/koajs.com:$VERSION
-          docker tag koajs.com ${{ secrets.DOCKER_USER }}/koajs.com:latest
-          docker push ${{ secrets.DOCKER_USER }}/koajs.com:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/koajs.com:latest
-
-
       - name: Build typescriptlang.org image
         working-directory: ./typescriptlang.org
         run: docker build -t typescriptlang.org .
@@ -279,52 +263,20 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/uiwjs.github.io:latest
 
 
-      - name: Build webpack.js.org image
-        working-directory: ./webpack.js.org
-        run: docker build -t webpack.js.org .
+      - name: Build koajs.com image
+        working-directory: ./koajs.com
+        run: docker build -t koajs.com .
 
-      - name: Tags & Push webpack.js.org
+      - name: Tags & Push koajs.com
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
-          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
-          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
-
-
-      - name: Build element.eleme.io image
-        working-directory: ./element.eleme.io
-        run: docker build -t element.eleme.io .
-
-      - name: Tags & Push element.eleme.io
-        run: |
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag element.eleme.io ${{ secrets.DOCKER_USER }}/element.eleme.io:$VERSION
-          docker tag element.eleme.io ${{ secrets.DOCKER_USER }}/element.eleme.io:latest
-          docker push ${{ secrets.DOCKER_USER }}/element.eleme.io:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/element.eleme.io:latest
-
-
-      - name: Build zh-hans.reactjs.org image
-        working-directory: ./zh-hans.reactjs.org
-        run: docker build -t zh-hans.reactjs.org .
-
-      - name: Tags & Push zh-hans.reactjs.org
-        run: |
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag zh-hans.reactjs.org ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:$VERSION
-          docker tag zh-hans.reactjs.org ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
-          docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
+          docker tag koajs.com ${{ secrets.DOCKER_USER }}/koajs.com:$VERSION
+          docker tag koajs.com ${{ secrets.DOCKER_USER }}/koajs.com:latest
+          docker push ${{ secrets.DOCKER_USER }}/koajs.com:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/koajs.com:latest
 
 
       - name: Build deno-manual-cn image
@@ -343,6 +295,22 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/deno-manual-cn:latest
 
 
+      - name: Build expressjs.com image
+        working-directory: ./expressjs.com
+        run: docker build -t expressjs.com .
+
+      - name: Tags & Push expressjs.com
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          docker tag expressjs.com ${{ secrets.DOCKER_USER }}/expressjs.com:$VERSION
+          docker tag expressjs.com ${{ secrets.DOCKER_USER }}/expressjs.com:latest
+          docker push ${{ secrets.DOCKER_USER }}/expressjs.com:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/expressjs.com:latest
+
+
       - name: Build v2.cn.vuejs.org image
         working-directory: ./v2.cn.vuejs.org
         run: docker build -t v2.cn.vuejs.org .
@@ -359,20 +327,52 @@ jobs:
           docker push ${{ secrets.DOCKER_USER }}/v2.cn.vuejs.org:latest
 
 
-      - name: Build ant.design image
-        working-directory: ./ant.design
-        run: docker build -t ant.design .
+      - name: Build webpack.js.org image
+        working-directory: ./webpack.js.org
+        run: docker build -t webpack.js.org .
 
-      - name: Tags & Push ant.design
+      - name: Tags & Push webpack.js.org
         run: |
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
-          docker tag ant.design ${{ secrets.DOCKER_USER }}/ant.design:latest
-          docker push ${{ secrets.DOCKER_USER }}/ant.design:$VERSION
-          docker push ${{ secrets.DOCKER_USER }}/ant.design:latest
+          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
+          docker tag webpack.js.org ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/webpack.js.org:latest
+
+
+      - name: Build zh-hans.reactjs.org image
+        working-directory: ./zh-hans.reactjs.org
+        run: docker build -t zh-hans.reactjs.org .
+
+      - name: Tags & Push zh-hans.reactjs.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          docker tag zh-hans.reactjs.org ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:$VERSION
+          docker tag zh-hans.reactjs.org ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/zh-hans.reactjs.org:latest
+
+
+      - name: Build cn.eslint.org image
+        working-directory: ./cn.eslint.org
+        run: docker build -t cn.eslint.org .
+
+      - name: Tags & Push cn.eslint.org
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
+          docker tag cn.eslint.org ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest
+          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:$VERSION
+          docker push ${{ secrets.DOCKER_USER }}/cn.eslint.org:latest
 
 
       # DO_NOT_DELETE_END

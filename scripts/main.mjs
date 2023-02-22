@@ -63,7 +63,8 @@ const __dirname = dirname(__filename);
 function getReadmeContent({ name, port, website, github } = {}) {
   const result = [];
   result.push(name);
-  result.push('\n---\n\n');
+  result.push('\n---\n');
+  result.push(`[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/${name})](https://hub.docker.com/r/wcjiang/${name}) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/${name}) ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/${name})\n\n`);
   result.push(`> Port: \`${port}\` - [${name}](${website})  - [Github](${github})\n\n`);
   result.push('```shell\n');
   result.push(`$ docker pull wcjiang/${name}:latest\n`);
