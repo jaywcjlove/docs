@@ -1,0 +1,15 @@
+{
+  "name": "docs",
+  "private": true,
+  "scripts": {
+    "start": "node --trace-warnings scripts/main.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/docs.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.1.0"
+  }
+}

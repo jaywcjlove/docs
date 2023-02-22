@@ -1,0 +1,116 @@
+[
+  { 
+    "name": "angular.cn",
+    "website": "https://angular.cn/",
+    "github": "https://github.com/angular/angular",
+    "port": 60016 
+  },
+  { 
+    "name": "ant.design",
+    "website": "https://ant.design/",
+    "github": "https://github.com/ant-design/ant-design",
+    "port": 60001
+  },
+  { 
+    "name": "cn.eslint.org",
+    "website": "https://cn.eslint.org/",
+    "github": "https://github.com/eslint/cn.eslint.org",
+    "port": 60017
+  },
+  { 
+    "name": "cn.vuejs.org",
+    "website": "https://cn.vuejs.org/",
+    "github": "https://github.com/vuejs-translations/docs-zh-cn",
+    "port": 60003
+  },
+  { 
+    "name": "deno-manual-cn",
+    "website": "https://nugine.github.io/deno-manual-cn/",
+    "github": "https://github.com/Nugine/deno-manual-cn",
+    "port": 60013
+  },
+  { 
+    "name": "element.eleme.io",
+    "website": "https://element.eleme.io",
+    "github": "https://github.com/ElemeFE/element",
+    "port": 60010
+  },
+  { 
+    "name": "element.react",
+    "website": "https://elemefe.github.io/element-react",
+    "github": "https://github.com/ElemeFE/element-react",
+    "port": 60011
+  },
+  { 
+    "name": "expressjs.com",
+    "website": "http://expressjs.com/",
+    "github": "https://github.com/expressjs/expressjs.com",
+    "port": 60008
+  },
+  { 
+    "name": "graphql.github.io",
+    "website": "https://graphql.github.io/",
+    "github": "https://github.com/graphql/graphql.github.io",
+    "port": 60014
+  },
+  { 
+    "name": "jestjs.io",
+    "website": "https://jestjs.io",
+    "github": "https://github.com/facebook/jest",
+    "port": 60009
+  },
+  { 
+    "name": "koajs.com",
+    "website": "https://koajs.com/",
+    "github": "https://github.com/koajs/koajs.com",
+    "port": 60004
+  },
+  { 
+    "name": "react-native",
+    "website": "https://facebook.github.io/react-native/",
+    "github": "https://github.com/facebook/react-native-website",
+    "port": 60005
+  },
+  { 
+    "name": "sequelize.org",
+    "website": "https://sequelize.org/",
+    "github": "https://github.com/sequelize/sequelize.org",
+    "port": 60031
+  },
+  { 
+    "name": "typeorm.github.io",
+    "website": "https://typeorm.io/",
+    "github": "https://github.com/typeorm/typeorm",
+    "port": 60006
+  },
+  { 
+    "name": "typescriptlang.org",
+    "website": "https://www.typescriptlang.org/",
+    "github": "",
+    "port": 60015
+  },
+  { 
+    "name": "uiwjs.github.io",
+    "website": "https://uiwjs.github.io",
+    "github": "https://github.com/uiwjs/uiwjs.github.io",
+    "port": 60066
+  },
+  { 
+    "name": "v2.cn.vuejs.org",
+    "website": "https://v2.cn.vuejs.org/",
+    "github": "https://github.com/vuejs/v2.cn.vuejs.org",
+    "port": 60018
+  },
+  { 
+    "name": "webpack.js.org",
+    "website": "https://webpack.js.org/",
+    "github": "https://github.com/webpack/webpack.js.org",
+    "port": 60012
+  },
+  { 
+    "name": "zh-hans.reactjs.org",
+    "website": "https://zh-hans.reactjs.org/",
+    "github": "",
+    "port": 60007
+  }
+]

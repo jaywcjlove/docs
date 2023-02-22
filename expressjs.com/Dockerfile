@@ -6,8 +6,3 @@ RUN mkdir -p $APPDIR
 
 WORKDIR $APPDIR
 ADD ./code/2x $APPDIR/2x
-
-COPY web.conf /etc/nginx/conf.d
-RUN cat /etc/nginx/conf.d/web.conf
-
-EXPOSE 60008

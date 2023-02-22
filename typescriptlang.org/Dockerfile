@@ -7,8 +7,3 @@ RUN mkdir -p $APPDIR
 WORKDIR $APPDIR
 
 ADD ./code $APPDIR
-
-COPY web.conf /etc/nginx/conf.d
-RUN cat /etc/nginx/conf.d/web.conf
-
-EXPOSE 60015
