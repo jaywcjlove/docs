@@ -8,7 +8,12 @@ const __dirname = dirname(__filename);
 
 ;(async () => {
   const require = createRequire(import.meta.url);
-  const data = require('./data.json');
+  /** @type {import('./data.json')}*/
+  const data = require('./data.json').sort((a, b) => {
+    if (a.port < b.port) return -1;
+    if (a.port > b.port) return 1;
+    return 0;
+  })
   const nginxContent = [];
   const nginxPath = path.resolve(__dirname, '../nginx/web.conf');
   const actionsContent = [];
@@ -17,17 +22,22 @@ const __dirname = dirname(__filename);
   const homeTableContent = ['Docker Image | Port/Github | Version | Image Size | Docker Pull', '---- | ---- | ---- | ---- | ----'];
   homeTableContent.push('[@wcjiang/docs](https://hub.docker.com/r/wcjiang/docs) | - | [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/docs)](https://hub.docker.com/r/wcjiang/docs) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/docs) | ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/docs)');
   const homeShellContent = ['```bash', 'docker run --name docs \\']
+
   await Promise.all(data.map(async (dt) => {
     const root = path.resolve(__dirname, `../${dt.name}`);
     const readmePath = path.resolve(root, 'README.md');
     await fs.writeFile(readmePath, getReadmeContent(dt));
     console.log(`Create:\x1b[35m ${readmePath}\x1b[0m`);
+  }));
+
+  data.forEach((dt) => {
     nginxContent.push(getNginxContent(dt));
     composeContent.push(getComposeContent(dt));
     homeTableContent.push(getHomeTableContent(dt));
     homeShellContent.push(`  -p ${dt.port}:80 \\`);
     actionsContent.push(getActionsContent(dt));
-  }));
+  })
+
   await fs.writeFile(nginxPath, nginxContent.join('\n'));
   console.log(`Create Nginx:\x1b[35m ${nginxPath}\x1b[0m`);
   await fs.writeFile(composePath, composeContent.join('\n'));
@@ -63,7 +73,7 @@ const __dirname = dirname(__filename);
 function getReadmeContent({ name, port, website, github } = {}) {
   const result = [];
   result.push(name);
-  result.push('\n---\n');
+  result.push('\n---\n\n');
   result.push(`[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/${name})](https://hub.docker.com/r/wcjiang/${name}) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/${name}) ![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/${name})\n\n`);
   result.push(`> Port: \`${port}\` - [${name}](${website})  - [Github](${github})\n\n`);
   result.push('```shell\n');
