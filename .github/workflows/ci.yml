@@ -6,7 +6,7 @@ on:
 
 jobs:
   get-static:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Clone sub repository
